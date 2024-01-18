@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.mchafer.shieldpass.R
 import com.mchafer.shieldpass.dat.PasswordDat
-import com.mchafer.shieldpass.databinding.ItemRecyclerviewListapasswordsBinding
 import com.mchafer.shieldpass.ui.adapters.ListaPasswordsInterface
 import com.mchafer.shieldpass.utils.Constantes
 
@@ -35,7 +34,7 @@ class ListaPasswordsRecyclerViewAdapter(private val listaPasswordDats:List<Passw
 
 
         // Elementos de la IU
-        val binding = ItemRecyclerviewListapasswordsBinding.bind(view)
+        // val binding = ItemRecyclerviewListapasswordsBinding.bind(view)
 
         fun render(contactoDat: PasswordDat?, listaContactosInterface: ListaPasswordsInterface){
 

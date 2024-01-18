@@ -1,15 +1,22 @@
 package com.mchafer.shieldpass
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.navigation.Navigation
-import com.mchafer.shieldpass.databinding.FragmentLoginBinding
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
+import androidx.compose.material3.MaterialTheme
+import androidx.navigation.compose.rememberNavController
+import com.mchafer.shieldpass.navigation.AppNavHost
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        // Starting point of the app
+        setContent {
+            MaterialTheme {
+              AppNavHost(navController = rememberNavController())
+            }
+        }
     }
 
 }
